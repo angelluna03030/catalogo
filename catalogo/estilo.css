@@ -1,0 +1,334 @@
+/* Estilos para todos los dispositivos */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+
+
+
+
+}
+
+
+
+
+
+/* Carrito de compras */
+i {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #fff;
+  width: 10;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  margin: block end 100px;
+  z-index: 1;
+  
+}
+
+i img {
+  width: 35px;
+  transition: all 0.3s;
+  box-shadow: #fff;
+  transition: box-shadow 0.15s, transform 0.15s;
+  margin: 15px;
+  will-change: box-shadow, transform;
+}
+
+i:hover {
+  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+i:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* Contenedor del footer */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Footer */
+.container-footer {
+
+
+
+  align-items: center;
+
+
+  position: fixed;
+}
+footer {
+  background-color: #EE4433;
+  color: #fff;
+
+  width: 100%;
+  text-align: center;
+
+height: 130px;
+ padding-top: 20px;
+}
+
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #EE4433;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #EE4433;
+  }
+  
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
+  
+  .footer-info p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  
+
+  .footer-info p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Contenedor de tarjetas */
+
+  
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajusta el ancho mínimo y máximo para pantallas más pequeñas. */
+    }
+}
+
+.card {
+    width: 290px;
+    height: 450px; /* Cambiado a 'auto' para permitir que la altura se ajuste automáticamente según el contenido. */
+    padding: 0.8em;
+    background: #f5f5f5;
+    display: flex; /* Cambiado a 'flex' en lugar de 'inline-flex' para adaptarse al contenido. */
+    flex-direction: column;
+    justify-content: center;
+    display: inline-block;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 60px; /* Reducido el margen para mejorar el espaciado en pantallas más pequeñas. */
+}
+
+.card-img {
+    width: 100%;
+    height: 55%; /* Ajustada la altura de la imagen. */
+    border-radius: 0.5rem; /* Cambiado a '0.5rem' en lugar de '.5rem' para mayor precisión. */
+    transition: 0.3s ease;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem; /* Cambiado a '0.5rem' en lugar de '.5rem' para mayor precisión. */
+    transition: 0.3s ease;
+}
+
+.card-info {
+    padding-top: 10%;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Texto */
+.text-title {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.text-body {
+    font-size: 0.9em;
+    padding-bottom: 10px;
+}
+
+   /*Button*/
+   .card-button button{
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+   }
+   
+   /*Hover*/
+   .card-img:hover {
+    transform: translateY(-25%);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+   }
+   
+
+   
+  
+  /* Estilos de tarjetas */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Checkboxes */
+  .checkbox-wrapper input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox-wrapper .terms-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-wrapper .terms-label .label-text {
+    margin-left: 10px;
+  }
+  
+  .checkbox-wrapper .checkbox-svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .checkbox-wrapper .checkbox-box {
+    fill: rgba(207, 205, 205, 0.425);
+    stroke: #8c00ff;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transition: stroke-dashoffset 0.6s ease-in;
+  }
+  
+  .checkbox-wrapper .checkbox-tick {
+    stroke: #8c00ff;
+    stroke-dasharray: 172;
+    stroke-dashoffset: 172;
+    transition: stroke-dashoffset 0.6s ease-in;
+  }
+  
+  .checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-box,
+  .checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+    stroke-dashoffset: 0;
+  }
+
+
+  /*buscador*/
+
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 300px;
+    justify-content: center;
+    margin: 0 auto;
+    
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(234,76,137,0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+   

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar JSON</title>
+</head>
+<body>
+    <script>
+        var nombre = "productos";
+
+        // Función para eliminar un usuario por su ID
+        function eliminarUsuario(id) {
+    fetch(`todo.php?delete=DELETE FROM ${nombre} WHERE id=${id}`, {
+        method: 'GET'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert(`Usuario eliminado con éxito con el id ${id}`);
+            cargarDatos();
+        } else {
+            alert('Error al eliminar el usuario');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+        function cargarDatos() {
+    fetch(`todo.php?consulta=SELECT * FROM ${nombre}`)
+    .then(response => response.json())
+    .then(data => {
+        const divDatos = document.querySelector('.datos-json'); 
+        const divBotones = document.querySelector('.datos-botones'); 
+        divDatos.innerHTML = JSON.stringify(data, null, 2);
+        divBotones.innerHTML = '';
+
+        data.forEach(item => {
+            var botonEliminar = document.createElement("button");
+            botonEliminar.innerHTML = "Eliminar";
+            botonEliminar.onclick = function() {
+                eliminarUsuario(item.id);
+            };
+            divBotones.appendChild(botonEliminar);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+            function insertarProducto(nombre, correo, asunto, mensaje) {
+            var nombreTable = "contactos";
+            fetch(`todo.php?insert=INSERT INTO ${nombreTable} (id, nombre, correo, asunto, mensaje) VALUES (NULL, '${nombre}', '${correo}', '${asunto}', '${mensaje}');`, {
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert(`Producto insertado con éxito`);
+                    cargarDatos(); // Recargar datos después de la inserción
+                } else {
+                    alert('Error al insertar el producto');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        cargarDatos();
+
+
+
+    </script>
+<div class="datos-json"></div>
+
+
+<div class="datos-botones"></div>
+    <div class="datos"></div>
+
+
+   <div class="datos-insertar">
+        <h2>Insertar Nuevo Producto</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="correo" placeholder="correo">
+        <input type="text" id="asunto" placeholder="asunto">
+        <textarea name="textarea" rows="10" cols="50" style="height:15px;" id="mensaje"></textarea>
+        <button onclick="insertarProducto(document.getElementById('nombre').value, document.getElementById('correo').value, document.getElementById('asunto').value, document.getElementById('mensaje').value)">Insertar</button>
+    </div>
+</body>
+</html>

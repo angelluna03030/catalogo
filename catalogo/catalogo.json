@@ -1,0 +1,62 @@
+[
+    {
+        "id_producto": "2",
+        "nombre_producto": "camisa hoodie azul",
+        "marca": "Gad",
+        "precio_unitario": "100000",
+        "existencias": "5",
+        "estado": "Activo",
+        "calificacion": "4",
+        "id_categoria": "1"
+    },
+    {
+        "id_producto": "3",
+        "nombre_producto": "Monello Raza Pequeña",
+        "marca": "Monello",
+        "precio_unitario": "18700",
+        "existencias": "20",
+        "estado": "Activo",
+        "calificacion": "0",
+        "id_categoria": "2"
+    },
+    {
+        "id_producto": "4",
+        "nombre_producto": "Pedigri Cachoro Grange",
+        "marca": "Pedigri",
+        "precio_unitario": "5600",
+        "existencias": "23",
+        "estado": "Activo",
+        "calificacion": "3",
+        "id_categoria": "2"
+    },
+    {
+        "id_producto": "5",
+        "nombre_producto": "Gorra Reabook",
+        "marca": "Reabook",
+        "precio_unitario": "800000",
+        "existencias": "5",
+        "estado": "Activo",
+        "calificacion": "10",
+        "id_categoria": "1"
+    },
+    {
+        "id_producto": "6",
+        "nombre_producto": "Dog Pijama Gap",
+        "marca": "Gap",
+        "precio_unitario": "80000",
+        "existencias": "4",
+        "estado": "Activo",
+        "calificacion": "5",
+        "id_categoria": "1"
+    },
+    {
+        "id_producto": "7",
+        "nombre_producto": "dog show adulto",
+        "marca": "dog show",
+        "precio_unitario": "27300",
+        "existencias": "25",
+        "estado": "Activo",
+        "calificacion": "5",
+        "id_categoria": "2"
+    }
+]
